@@ -46,7 +46,7 @@ Command has been added
 #### List all stored commands
 
 ```bash
-$ cmdbox list
+cmdbox list
 ```
 
 #### Run a stored command
