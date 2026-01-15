@@ -1,5 +1,6 @@
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
+import { version } from "../package.json";
 import {
   addHandler,
   listHandler,
@@ -44,6 +45,6 @@ yargs(hideBin(process.argv))
   )
   .help()
   .alias("h", "help")
-  .version()
+  .version(version)
   .alias("v", "version")
   .parse();
