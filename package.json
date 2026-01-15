@@ -1,13 +1,13 @@
 {
   "name": "cmdbox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "bin": {
     "cmdbox": "dist/cmdbox.js"
   },
   "scripts": {
     "build": "rolldown -c",
-    "dev": "cross-env DEV=true rolldown -wc",
+    "dev": "rolldown -wc",
     "prepublishOnly": "pnpm run build",
     "link-cli": "pnpm run build && pnpm -g link",
     "unlink-cli": "pnpm rm -g cmdbox"
