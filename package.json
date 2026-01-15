@@ -1,0 +1,49 @@
+{
+  "name": "cmdbox",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "cmdbox": "dist/cmdbox.js"
+  },
+  "scripts": {
+    "build": "rolldown -c",
+    "dev": "cross-env DEV=true rolldown -wc",
+    "prepublishOnly": "pnpm run build",
+    "link-cli": "pnpm run build && pnpm -g link",
+    "unlink-cli": "pnpm rm -g cmdbox"
+  },
+  "description": "A simple CLI tool for storing, managing, and quickly running frequently used commands.",
+  "author": "Oliwier Tkacz",
+  "license": "MIT",
+  "packageManager": "pnpm@10.28.0",
+  "homepage": "https://github.com/cresvin/cmdbox#README",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cresvin/cmdbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cresvin/cmdbox/issues"
+  },
+  "keywords": [
+    "cli",
+    "command",
+    "cmd",
+    "command-manager",
+    "terminal",
+    "productivity"
+  ],
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "devDependencies": {
+    "@types/node": "^25.0.8",
+    "@types/yargs": "^17.0.35",
+    "cross-env": "^10.1.0",
+    "rolldown": "1.0.0-beta.60"
+  },
+  "dependencies": {
+    "@topcli/prompts": "^2.4.1",
+    "yargs": "^18.0.0"
+  }
+}
